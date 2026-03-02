@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWANI 2026 - Ignite the Spark. Celebrate the Talent.</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="particles-js" class="bg-particles"></div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">GWANI <span>'26</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#events" class="nav-link">Events</a>
+                <a href="#schedule" class="nav-link">Schedule</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#register" class="btn btn-outline nav-btn">Register Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section">
+        <div class="container hero-content hidden">
+            <div class="hero-badge">Mar Ephraem College of Engineering & Technology</div>
+            <h1 class="hero-title">GWANI <span>2026</span></h1>
+            <p class="tagline">"Ignite the Spark. Celebrate the Talent."</p>
+            <div class="hero-details">
+                <div class="detail-item">
+                    <i class="far fa-calendar-check"></i>
+                    <span>18th March 2026</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Mar Ephraem Campus</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="#events" class="btn btn-primary btn-glow">Explore Events</a>
+                <a href="#register" class="btn btn-secondary">Register Now</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <p>Scroll Down</p>
+            <i class="fas fa-chevron-down scroll-anim"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header hidden">
+                <h2 class="title">About <span>The Fest</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text glass-card hidden fade-left">
+                    <h3>A Celebration of Excellence</h3>
+                    <p>GWANI 2026 is the premier inter-college cultural and technical fest hosted by Mar Ephraem College
+                        of Engineering and Technology. It brings together brilliant minds from various institutions to
+                        compete, collaborate, and celebrate.</p>
+                    <p>This year, we are hosting <strong>31 diverse events</strong> designed for both Under Graduate
+                        (UG) and Post Graduate (PG) students. Join us to make memories, display your creativity, and
+                        ignite the spark!</p>
+                </div>
+                <div class="about-stats glass-card hidden fade-right">
+                    <div class="stat-item">
+                        <h4 class="counter" data-target="31">0</h4>
+                        <p>Total Events</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4 class="counter" data-target="2">0</h4>
+                        <p>Categories (UG & PG)</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4 class="counter" data-target="1">0</h4>
+                        <p>Epic Day</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events section">
+        <div class="container">
+            <div class="section-header hidden">
+                <h2 class="title">Exciting <span>Events</span></h2>
+                <div class="line"></div>
+                <p class="subtitle">Choose your battleground and showcase your skills.</p>
+            </div>
+
+            <div class="event-controls hidden">
+                <button class="filter-btn active" data-filter="ug">Under Graduate (UG)</button>
+                <button class="filter-btn" data-filter="pg">Post Graduate (PG)</button>
+            </div>
+
+            <div class="events-grid" id="events-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule section">
+        <div class="container">
+            <div class="section-header hidden">
+                <h2 class="title">Event <span>Schedule</span></h2>
+                <div class="line"></div>
+                <p class="subtitle">18th March 2026 - Save the Date!</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item hidden">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>08:30 AM</h3>
+                        <h4>Registration Desk Opens</h4>
+                        <p>Verify your details and collect your event tags.</p>
+                    </div>
+                </div>
+                <div class="timeline-item hidden">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>09:30 AM</h3>
+                        <h4>Inaugural Ceremony</h4>
+                        <p>Grand opening of GWANI '26 accompanied by a cultural performance.</p>
+                    </div>
+                </div>
+                <div class="timeline-item hidden">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>10:30 AM</h3>
+                        <h4>Events Commence (Phase 1)</h4>
+                        <p>Technical and non-technical events begin across various venues.</p>
+                    </div>
+                </div>
+                <div class="timeline-item hidden">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>01:00 PM</h3>
+                        <h4>Lunch Break</h4>
+                        <p>Reboot and refresh at our food stalls.</p>
+                    </div>
+                </div>
+                <div class="timeline-item hidden">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>02:00 PM</h3>
+                        <h4>Events Commence (Phase 2)</h4>
+                        <p>Final rounds and remaining events.</p>
+                    </div>
+                </div>
+                <div class="timeline-item hidden">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>04:30 PM</h3>
+                        <h4>Valedictory & Prize Distribution</h4>
+                        <p>Honoring the winners and closing ceremony.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="register section">
+        <div class="container">
+            <div class="section-header hidden">
+                <h2 class="title">Register <span>Now</span></h2>
+                <div class="line"></div>
+                <p class="subtitle">Secure your spot in GWANI '26.</p>
+            </div>
+
+            <div class="register-container glass-card hidden">
+                <form id="registration-form" class="form">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                        <input type="text" id="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="college"><i class="fas fa-university"></i> College Name</label>
+                        <input type="text" id="college" placeholder="XYZ College of Engineering" required>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                            <input type="email" id="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+91 9876543210" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="category"><i class="fas fa-layer-group"></i> Category</label>
+                        <select id="category" required>
+                            <option value="" disabled selected>Select Category</option>
+                            <option value="ug">Under Graduate (UG)</option>
+                            <option value="pg">Post Graduate (PG)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-select"><i class="fas fa-trophy"></i> Choose Event</label>
+                        <select id="event-select" required disabled>
+                            <option value="" disabled selected>Please select a category first</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-glow btn-submit">
+                        <span>Submit Registration</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+        <div class="container">
+            <div class="section-header hidden">
+                <h2 class="title">Moments of <span>Glory</span></h2>
+                <div class="line"></div>
+                <p class="subtitle">A glimpse into our past events.</p>
+            </div>
+
+            <div class="gallery-grid hidden">
+                <div class="gallery-item">
+                    <div class="img-placeholder"><i class="fas fa-camera"></i>
+                        <p>Gallery Image 1</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder"><i class="fas fa-users"></i>
+                        <p>Gallery Image 2</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder"><i class="fas fa-music"></i>
+                        <p>Gallery Image 3</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder"><i class="fas fa-paint-brush"></i>
+                        <p>Gallery Image 4</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder"><i class="fas fa-microphone"></i>
+                        <p>Gallery Image 5</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder"><i class="fas fa-trophy"></i>
+                        <p>Gallery Image 6</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq section">
+        <div class="container">
+            <div class="section-header hidden">
+                <h2 class="title">Got <span>Questions?</span></h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="faq-container hidden">
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Who can participate in GWANI '26?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All Bonafide students from recognized Engineering, Arts & Science, and Management colleges
+                            can participate.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Is there any registration fee?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Registration fee details will be updated shortly. You can register online to reserve your
+                            spot, and payment details will be communicated to your email.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Can I participate in multiple events?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, as long as the event timings do not clash. Please refer to the detailed schedule on the
+                            event day.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Will accommodation be provided?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Accommodation requests are handled on a case-by-case basis for outstation participants.
+                            Please contact the organizers directly for arrangements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header hidden">
+                <h2 class="title">Get In <span>Touch</span></h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="contact-wrap glass-card hidden">
+                <div class="contact-info">
+                    <div class="c-item">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Mar Ephraem College of Engineering and Technology,<br>Malankara Hills, Elavuvilai,
+                                Marthandam, Tamil Nadu.</p>
+                        </div>
+                    </div>
+                    <div class="c-item">
+                        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 (000) 000-0000</p>
+                            <p>+91 (000) 000-0000</p>
+                        </div>
+                    </div>
+                    <div class="c-item">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@marephraem.edu.in</p>
+                            <p>gwani26@marephraem.edu.in</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-map"
+                    style="position: relative; overflow: hidden; border-radius: 10px; height: 100%; min-height: 300px;">
+                    <iframe src="https://maps.google.com/maps?q=8.278953,77.220085&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0; position: absolute; top:0; left:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>GWANI <span>'26</span></h2>
+                    <p>Ignite the Spark. Celebrate the Talent.</p>
+                </div>
+                <p>&copy; 2026 Mar Ephraem College of Engineering and Technology. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
