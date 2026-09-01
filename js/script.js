@@ -572,37 +572,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Prizes will be distributed on the spot to the winners.",
             "The judges’ decision shall be final and binding."
         ],
-        "Aaari Artistry": [
-            "Individual Participation.",
-            "There is no restriction on the number of participants from each college.",
-            "Theme: Floral Fantasy",
-            "Frame Size: 12 inches",
-            "Time limit: 1 hour and 30 minutes.",
-            "Participants must bring their own materials.",
-            "Only hand embroidery is allowed.",
-            "Designs must be original.",
-            "Pre-made patterns or machine work are strictly prohibited.",
-            "Participants must maintain cleanliness of the workspace.",
-            "The judges’ decision shall be final and binding."
-        ],
-        "Vegetable Carving": [
-            "Team size: 2 members.",
-            "There is no restriction on the number of teams from each college.",
-            "Time limit: 1 hour.",
-            "Only edible vegetables should be used.",
-            "Pre-carved materials are strictly prohibited.",
-            "Participants must bring all required tools and vegetables.",
-            "Participants must maintain cleanliness of the workspace.",
-            "The judges’ decision shall be final and binding."
-        ],
-        "Floral Arrangement": [
-            "Team size: 2 members.",
-            "There is no restriction on the number of teams from each college.",
-            "Participants must bring their own flowers and materials.",
-            "Only fresh flowers should be used.",
-            "Participants must maintain cleanliness of the workspace.",
-            "The judges’ decision shall be final and binding."
-        ],
+
 
         /* GENERAL & COMMON GUIDELINES */
         "General Guidelines": [
