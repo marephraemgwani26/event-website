@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* --- Typing Effect --- */
     const typingText = document.getElementById('hero-typing-text');
     if (typingText) {
-        const textToType = "Mar Ephraem College warmly welcomes you to <b>Gwani '26</b>, a <b>National Level Techno Management Fest</b> — celebrating excellence beyond boundaries.";
+        const textToType = "Mar Ephraem College warmly welcomes you to <b>Gwani 2.0</b>, a <b>National Level Techno Management Fest</b> — celebrating excellence beyond boundaries.";
         typingText.innerHTML = '';
         let i = 0;
         const speed = 25; // ms per char
@@ -267,8 +267,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* --- Countdown Timer --- */
     const updateCountdown = () => {
-        // Set event date: 18th March 2026 09:00:00 AM (local time)
-        const eventDate = new Date("March 18, 2026 09:00:00").getTime();
+        // Set event date: 9th September 2026 09:00:00 AM (local time)
+        const eventDate = new Date("September 9, 2026 09:00:00").getTime();
         const now = new Date().getTime();
         const distance = eventDate - now;
 
@@ -304,167 +304,273 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update timer every second
     setInterval(updateCountdown, 1000);
 
-    /* --- Rules Modal Data & Logic --- */
+    /* --- Rules Modal Data & Logic --- */    /* --- Rules Modal Data & Logic --- */
     const eventRules = {
-        "General Quiz": [
-            "Team size: 2 members.",
-            "There is no restriction on the number of teams from each college.",
-            "The detailed structure of the event will be announced at the time of the event.",
-            "Use of electronic gadgets is strictly prohibited.",
-            "Judges’ decision will be final and binding."
-        ],
-        "Treasure Hunt": [
-            "Team size: 4 members.",
-            "There is no restriction on the number of teams from each college.",
-            "The detailed structure of the event will be announced at the time of the event.",
-            "The event will take place within a designated area.",
-            "Teams must solve clues and riddles to proceed to the next location.",
-            "Judges’ decision will be final and binding."
-        ],
-        "Folk Dance Group": [
-            "Team size: 8–12 members.",
-            "There is no restriction on the number of teams from each college.",
-            "Participants must perform a folk dance.",
-            "Time limit: 4 minutes.",
-            "The soundtrack must be submitted in MP3 format (on a pen drive) at the registration desk.",
-            "Use of flammable objects or dangerous materials is strictly prohibited.",
-            "Vulgarity, profanity, or obscenity is strictly prohibited.",
-            "Judges’ decision will be final and binding."
-        ],
-        "Western Dance Group": [
-            "Team size: 8–12 members.",
-            "There is no restriction on the number of teams from each college.",
-            "Time limit: 4 minutes.",
-            "The soundtrack must be submitted in MP3 format (on a pen drive) at the registration desk.",
-            "Use of flammable objects or dangerous materials is strictly prohibited.",
-            "Vulgarity, profanity, or obscenity is strictly prohibited.",
-            "Judges’ decision will be final and binding."
-        ],
-        "Poster Presentation": [
-            "Team size: 2 members.",
-            "There is no restriction on the number of teams from each college.",
-            "Theme: Social Media as a Tool for Social Change",
-            "Time limit: 1 hour for poster preparation.",
-            "Each team will be given 1 minute for presentation.",
-            "The presentation will be followed by a Question & Answer session.",
-            "Participants must bring all required materials.",
-            "The poster must be prepared only during the allotted time.",
-            "Use of printed or pre-prepared materials is not permitted.",
-            "White Chart will be provided.",
-            "Judges’ decision will be final and binding."
-        ],
-        "Idea Pitching": [
-            "Team size: 2 members.",
-            "There is no restriction on the number of teams from each college.",
-            "Time limit: 5 minutes.",
-            "The presentation must be in PPT format.",
-            "The PPT must be submitted on a pen drive at the registration desk.",
-            "The idea should be original, feasible, innovative, and economically viable.",
-            "A Question & Answer session will follow.",
-            "Judges’ decision will be final and binding."
-        ],
-        "Group Song": [
-            "Team size: 6–12 members.",
-            "There is no restriction on the number of teams from each college.",
-            "Time limit: 3 minutes.",
-            "Song should be in Tamil/Malayalam.",
-            "Use of instruments or karaoke is not permitted.",
-            "Judges’ decision will be final and binding."
-        ],
-        "Face Painting": [
-            "Team size: 2 members (Artist and Model).",
-            "There is no restriction on the number of teams from each college.",
-            "Time limit: 45 minutes.",
-            "Theme: Dual Shades - Two Contrasting Sides.",
-            "Participants must bring paint, brushes, and other required materials.",
-            "A short presentation session will follow.",
-            "Judges’ decision will be final and binding."
-        ],
-        "Best Shot": [
-            "Individual participation.",
+        /* PG EVENTS */
+        "Best Manager": [
+            "This is an individual event.",
             "There is no restriction on the number of participants from each college.",
-            "Theme will be announced on the spot.",
-            "Photographs must be taken during the event.",
-            "Only smartphone photography is allowed.",
-            "Editing is strictly prohibited.",
-            "The number of rounds will depend on the number of participants.",
-            "Judges’ decision will be final and binding."
+            "The detailed structure and rounds of the event will be announced on the day of the event.",
+            "Participants must be dressed in formal attire.",
+            "Each participant must carry two hard copies of their updated résumé.",
+            "The event will evaluate participants’ managerial knowledge, analytical ability, decision-making skills, and overall managerial aptitude.",
+            "The decision of the judges shall be final and binding."
         ],
-        "Cook Without Fire": [
-            "Team size: 2 members.",
-            "There is no restriction on the number of teams from each college.",
-            "Time limit: 1 hour.",
-            "Use of fire, electrical appliances, or microwave ovens is not allowed.",
-            "Participants must bring essential materials.",
-            "Only pre-approved ingredients and utensils are allowed.",
-            "Judges’ decision will be final and binding."
+        "Business Plan": [
+            "Team Size: 3–4 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "Presentation Time Limit: 4 minutes.",
+            "A Question-and-Answer (Q&A) session will follow the presentation.",
+            "The presentation must be submitted in PPT format on a pen drive at the registration desk.",
+            "The judges’ decision shall be final and binding."
         ],
-        "Paper Presentation": [
-            "Team size: 2 members.",
-            "There is no restriction on the number of teams from each college.",
-            "The theme of the papers should be from the area of Arts, Science, Engineering and Management.",
-            "The presentation should not exceed 5 minutes.",
-            "The presentation should be in PPT.",
-            "The PPT must be submitted on a pen drive at the registration desk.",
-            "A Question & Answer session will follow.",
-            "Judges’ decision will be final and binding."
+        "Business Quiz": [
+            "Team Size: 2 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "The detailed structure and rules of the event will be announced on the day of the event.",
+            "The use of mobile phones, electronic gadgets, or any other external assistance is strictly prohibited.",
+            "Participants must follow all instructions given by the quiz coordinators and judges.",
+            "The judges’ decision shall be final and binding."
         ],
-        "Spot Games": [
-            "Individual participation",
-            "There is no restriction on the number of participants from each college.",
-            "Games will be announced on the spot.",
-            "Fair play and discipline must be maintained.",
-            "Prizes will be distributed on spot.",
-            "Judges’ decision will be final and binding"
+        "AD-ZAP": [
+            "Team Size: 5–8 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "Time Limit: 3 minutes.",
+            "The advertisement must be unique, creative, and innovative.",
+            "A Question-and-Answer (Q&A) session will follow the performance.",
+            "The use of flammable objects, weapons, or hazardous materials is strictly prohibited.",
+            "Any form of vulgarity, profanity, obscenity, or inappropriate content is strictly prohibited.",
+            "Participants may select any product of their choice and prepare the advertisement in advance.",
+            "The judges’ decision shall be final and binding."
         ],
-        "Art from Waste": [
-            "Team size: 2 members",
-            "There is no restriction on the number of teams from each college.",
-            "Time limit: 1 hour.",
-            "Participants must bring their own recyclable or reusable materials.",
-            "The working area must be kept clean after completion.",
-            "Judges’ decision will be final and binding."
+        "Corporate Show": [
+            "Team Size: 8–12 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "Time Limit: 4 minutes.",
+            "Audio files containing music only must be submitted on a pen drive at the registration desk.",
+            "Simple and professional props are permitted, such as laptops, file folders, and notepads.",
+            "A Question-and-Answer (Q&A) session will follow the performance.",
+            "The judges’ decision shall be final and binding."
         ],
-        "Bridal Parade": [
-            "Team size: 2 members (Stylist and Model)",
-            "There is no restriction on the number of teams from each college.",
-            "Time limit: 1 hour for makeup and preparation, followed by a ramp walk with the stylist.",
-            "A Question & Answer session will follow.",
-            "Participants must arrange their own costume, makeup and accessories.",
-            "Vulgarity, profanity, or obscenity is strictly prohibited.",
-            "Judges’ decision will be final and binding."
-        ],
-        "Mehandhi Designing": [
-            "Team size: 2 members (Artist and Model)",
-            "There is no restriction on the number of teams from each college.",
-            "Theme: Bridal Mehandi.",
-            "Time limit: 1 hour.",
-            "Participants must bring their own henna (Instant henna not permitted).",
-            "Use of stencils is not permitted.",
-            "Design should be done on both hands.",
-            "Judges’ decision will be final and binding."
+        "Finance Game": [
+            "Team Size: 4 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "The detailed structure and rules of the event will be announced on the day of the event.",
+            "The event will focus on finance-related activities, analytical thinking, and problem-solving skills.",
+            "The use of mobile phones, calculators, or other electronic devices is strictly prohibited, unless expressly permitted by the event coordinators or judges.",
+            "The judges’ decision shall be final and binding."
         ],
         "Master of Market": [
             "Team Size: 3 members.",
-            "There is no restriction on the number of teams from each college.",
-            "The detailed structure of the event will be announced on the day of the event.",
-            "Participants must adhere to the time limit prescribed for the event.",
-            "The use of mobile phones or any other unfair means is strictly prohibited unless expressly permitted by the judges.",
-            "The event aims to test marketing knowledge, creativity, and analytical abilities.",
-            "Judges’ decision will be final and binding"
+            "There is no restriction on the number of teams participating from each college.",
+            "The detailed structure and rules of the event will be announced on the day of the event.",
+            "Participants must strictly adhere to the time limits prescribed for each round.",
+            "The use of mobile phones, electronic devices, or any other unfair means is strictly prohibited, unless expressly permitted by the judges.",
+            "The event is designed to assess participants’ marketing knowledge, creativity, analytical thinking, and decision-making skills.",
+            "The judges’ decision shall be final and binding."
+        ],
+
+        /* UG EVENTS */
+        "General Quiz": [
+            "Team Size: 2 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "The detailed structure and rules of the event will be announced on the day of the event.",
+            "The use of mobile phones, electronic gadgets, or any other external assistance is strictly prohibited.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Treasure Hunt": [
+            "Team Size: 4 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "The detailed structure and rules of the event will be announced on the day of the event.",
+            "The event will be conducted within a designated area.",
+            "Teams must solve clues and riddles to proceed to the next location.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Folk Dance Group": [
+            "Team Size: 8–12 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "Participants must perform a folk dance.",
+            "Time Limit: 4 minutes.",
+            "The soundtrack must be submitted in MP3 format on a pen drive at the registration desk.",
+            "The use of flammable objects, dangerous materials, or hazardous props is strictly prohibited.",
+            "Any form of vulgarity, profanity, obscenity, or inappropriate content is strictly prohibited.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Poster Presentation": [
+            "Team Size: 2 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "Theme: AI in Digital Marketing",
+            "Time Limit: 1 hour for poster preparation.",
+            "Each team will be given 1 minute for the presentation.",
+            "A Question-and-Answer (Q&A) session will follow the presentation.",
+            "Participants must bring all the required materials.",
+            "The poster must be prepared only during the allotted time.",
+            "The use of printed or pre-prepared materials is strictly prohibited.",
+            "White chart paper will be provided.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Idea Pitching": [
+            "Team Size: 2 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "Time Limit: 5 minutes.",
+            "The presentation must be prepared in PPT format.",
+            "The PPT must be submitted on a pen drive at the registration desk.",
+            "The proposed idea should be original, feasible, innovative, and economically viable.",
+            "A Question-and-Answer (Q&A) session will follow the presentation.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Face Painting": [
+            "Team Size: 2 members (Artist and Model).",
+            "There is no restriction on the number of teams participating from each college.",
+            "Time Limit: 45 minutes.",
+            "Theme: Dual Shades – Two Contrasting Sides",
+            "Participants must bring their own paints, brushes, and other required materials.",
+            "A short presentation will follow the completion of the artwork.",
+            "Participants are responsible for arranging all the materials required for the event.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Best Shot": [
+            "Individual Participation.",
+            "There is no restriction on the number of participants from each college.",
+            "The theme will be announced on the spot.",
+            "Photographs must be captured during the event.",
+            "Only smartphone photography is permitted.",
+            "Editing or post-processing of photographs is strictly prohibited.",
+            "The number of rounds will depend on the number of participants.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Cook Without Fire": [
+            "Team Size: 2 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "Time Limit: 1 hour.",
+            "The use of fire, electrical appliances, or microwave ovens is strictly prohibited.",
+            "Participants must bring all essential materials required for the preparation.",
+            "Only pre-approved ingredients and utensils are permitted.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Paper Presentation": [
+            "Team Size: 2 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "The paper must be based on a topic related to Arts, Science, Engineering, or Management.",
+            "Presentation Time Limit: 5 minutes.",
+            "The presentation must be in PPT format.",
+            "The PPT must be submitted on a pen drive at the registration desk.",
+            "A Question-and-Answer (Q&A) session will follow the presentation.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Art from Waste": [
+            "Team Size: 2 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "Time Limit: 1 hour.",
+            "Participants must bring their own recyclable or reusable materials.",
+            "The working area must be kept clean and tidy throughout the event and after completion.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Bridal Parade": [
+            "Team Size: 2 members (Stylist and Model).",
+            "There is no restriction on the number of teams participating from each college.",
+            "Time Limit: 1 hour for makeup and preparation, followed by a ramp walk with the stylist.",
+            "A Question-and-Answer (Q&A) session will follow the ramp walk.",
+            "Participants must arrange their own costume, makeup, accessories, and other required materials.",
+            "Any form of vulgarity, profanity, obscenity, or inappropriate content is strictly prohibited.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Mehandhi Designing": [
+            "Team Size: 2 members (Artist and Model).",
+            "There is no restriction on the number of teams participating from each college.",
+            "Theme: Bridal Mehendi",
+            "Time Limit: 1 hour.",
+            "Participants must bring their own henna. Instant henna is not permitted.",
+            "The use of stencils is strictly prohibited.",
+            "The design should be done on both hands.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Mehendi Designing": [
+            "Team Size: 2 members (Artist and Model).",
+            "There is no restriction on the number of teams participating from each college.",
+            "Theme: Bridal Mehendi",
+            "Time Limit: 1 hour.",
+            "Participants must bring their own henna. Instant henna is not permitted.",
+            "The use of stencils is strictly prohibited.",
+            "The design should be done on both hands.",
+            "The judges’ decision shall be final and binding."
         ],
         "Reels Making": [
-            "Team size: 2 members",
-            "There is no restriction on the number of teams from each college.",
-            "The reel should cover the entire Gwani ’26 event and should be submitted within the given time.",
+            "Team Size: 2–3 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "The reel must cover the GWANI ’26 2.O event and must be submitted within the prescribed time.",
             "Reel Duration: Minimum 30 seconds and maximum 60 seconds.",
-            "The reel must be in vertical format (9:16 ratio).",
-            "Minimum resolution: 720p (HD preferred).",
+            "The reel must be in vertical format (9:16 aspect ratio).",
+            "Minimum Resolution: 720p (HD preferred).",
             "The final video must be submitted in MP4 format only.",
-            "No plagiarism or copied content will be accepted.",
-            "Clear visuals and proper audio quality must be ensured.",
-            "Inappropriate, offensive, or political content must be avoided.",
-            "Judges’ decision will be final and binding."
+            "Plagiarized or copied content will not be accepted.",
+            "Participants must ensure clear visuals and good audio quality.",
+            "Inappropriate, offensive, or political content is strictly prohibited.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Fashion Show": [
+            "Team Size: 6–12 members.",
+            "There is no restriction on the number of participants from each college.",
+            "Costumes must be decent, appropriate, and suitable for an academic event.",
+            "Audio files containing music only must be submitted on a pen drive at the registration desk.",
+            "The use of flammable objects, dangerous materials, or hazardous props is strictly prohibited.",
+            "Any form of vulgarity, profanity, obscenity, or inappropriate content is strictly prohibited.",
+            "A Question-and-Answer (Q&A) session will follow the performance.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Pencil Sketch": [
+            "Individual Participation.",
+            "There is no restriction on the number of participants from each college.",
+            "Time Limit: 1 hour.",
+            "The theme will be announced on the spot.",
+            "Chart paper will be provided.",
+            "Participants may bring their own pencils and basic sketching materials.",
+            "The judges’ decision shall be final and binding."
+        ],
+
+        /* COMMON EVENTS / OPEN TO BOTH */
+        "Western Dance Group": [
+            "Team Size: 8–12 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "Time Limit: Maximum of 4 minutes.",
+            "The soundtrack must be submitted in MP3 format on a pen drive at the registration desk.",
+            "Any form of vulgarity, profanity, obscenity, or inappropriate content is strictly prohibited.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Western Dance": [
+            "Team Size: 8–12 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "Time Limit: Maximum of 4 minutes.",
+            "The soundtrack must be submitted in MP3 format on a pen drive at the registration desk.",
+            "Any form of vulgarity, profanity, obscenity, or inappropriate content is strictly prohibited.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Solo Dance": [
+            "Individual Participation.",
+            "There is no restriction on the number of participants from each college.",
+            "Time Limit: Maximum of 3 minutes.",
+            "The soundtrack must be submitted in MP3 format on a pen drive at the registration desk.",
+            "Any form of vulgarity, profanity, obscenity, or inappropriate content is strictly prohibited.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Group Song": [
+            "Team Size: 6–12 members.",
+            "There is no restriction on the number of teams participating from each college.",
+            "Time Limit: 3 minutes.",
+            "Songs must be performed in Tamil or Malayalam.",
+            "The use of musical instruments or karaoke tracks is not permitted.",
+            "Participants must adhere strictly to the prescribed time limit.",
+            "The judges’ decision shall be final and binding."
+        ],
+        "Spot Games": [
+            "Individual Participation.",
+            "Participants who register only for the Spot Game must pay the prescribed registration fee.",
+            "Participants who have already registered for any other event may participate in the Spot Game without paying an additional registration fee.",
+            "There is no restriction on the number of participants from each college.",
+            "The games will be announced on the spot.",
+            "Participants must maintain fair play, discipline, and sportsmanship throughout the event.",
+            "Prizes will be distributed on the spot to the winners.",
+            "The judges’ decision shall be final and binding."
         ],
         "Aaari Artistry": [
             "Individual Participation.",
@@ -477,7 +583,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Designs must be original.",
             "Pre-made patterns or machine work are strictly prohibited.",
             "Participants must maintain cleanliness of the workspace.",
-            "Judges’ decision will be final and binding."
+            "The judges’ decision shall be final and binding."
         ],
         "Vegetable Carving": [
             "Team size: 2 members.",
@@ -487,17 +593,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Pre-carved materials are strictly prohibited.",
             "Participants must bring all required tools and vegetables.",
             "Participants must maintain cleanliness of the workspace.",
-            "Judges’ decision will be final and binding."
-        ],
-        "Fashion Show": [
-            "Team size: 6–12 members.",
-            "There is no restriction on the number of participants from each college.",
-            "Costumes must be decent and appropriate.",
-            "Audio files (music only) must be submitted in a pen drive at the registration desk.",
-            "Use of flammable objects or dangerous materials is strictly prohibited.",
-            "Vulgarity, profanity, or obscenity is strictly prohibited.",
-            "A Question & Answer session will follow.",
-            "Judges’ decision will be final and binding."
+            "The judges’ decision shall be final and binding."
         ],
         "Floral Arrangement": [
             "Team size: 2 members.",
@@ -505,86 +601,44 @@ document.addEventListener('DOMContentLoaded', () => {
             "Participants must bring their own flowers and materials.",
             "Only fresh flowers should be used.",
             "Participants must maintain cleanliness of the workspace.",
-            "Judges’ decision will be final and binding."
+            "The judges’ decision shall be final and binding."
         ],
-        "Pencil Sketch": [
-            "Individual participation.",
-            "There is no restriction on the number of participants from each college.",
-            "Time limit: 1 hour.",
-            "Theme will be announced on the spot.",
-            "Only the chart will be provided.",
-            "Pencils and basic sketching materials are allowed.",
-            "Judges’ decision will be final and binding."
-        ],
-        "Best Manager": [
-            "Individual event.",
-            "There is no restriction on the number of participants from each college.",
-            "The detailed structure of the event will be announced on the day of the event.",
-            "Participants must be in formal attire.",
-            "Each participant must carry two hard copies of their updated resume.",
-            "The event evaluates managerial knowledge, analytical ability, and decision-making skills.",
-            "Judges’ decision will be final and binding"
-        ],
-        "Business Plan": [
-            "Team size: 3-4 members.",
-            "There is no restriction on the number of teams from each college.",
-            "Time limit: 4 minutes for presentation.",
-            "A Question & Answer round will follow the presentation.",
-            "The PPT must be submitted on a pen drive at the registration desk.",
-            "Judges’ decision will be final and binding."
-        ],
-        "Business Quiz": [
-            "Team size: 2 members.",
-            "There is no restriction on the number of teams from each college.",
-            "The detailed structure of the event will be announced on the day of the event.",
-            "Use of electronic gadgets is strictly prohibited.",
-            "Judges’ decision will be final and binding."
-        ],
-        "AD-ZAP": [
-            "Team size: 5–8 members.",
-            "There is no restriction on the number of teams from each college.",
-            "Time limit: 3 minutes.",
-            "The theme must be unique and innovative.",
-            "A Question & Answer round will follow the performance.",
-            "Use of flammable objects, weapons, or hazardous materials is strictly prohibited.",
-            "Any form of vulgarity, profanity, or obscenity is strictly prohibited.",
-            "Judges’ decision will be final and binding."
-        ],
-        "Corporate Show": [
-            "Team size: 8–12 members.",
-            "There is no restriction on the number of teams from each college.",
-            "Time limit: 4 minutes.",
-            "Audio files (music only) must be submitted in a pen drive at the registration desk.",
-            "Participants must be dressed in corporate/business professional attire.",
-            "Subtle professional props are permitted (e.g., laptop, file folder, notepad).",
-            "A Question & Answer session will follow the performance.",
-            "Judges’ decision will be final and binding."
-        ],
-        "Finance Game": [
-            "Team size: 4 members.",
-            "There is no restriction on the number of teams from each college.",
-            "The detailed structure of the event will be announced on the day of the event.",
-            "The event focuses on finance-based activities and problem-solving.",
-            "Each team must bring a laptop and pen drive.",
-            "Use of additional electronic devices is strictly prohibited.",
-            "Judges’ decision will be final and binding."
-        ],
+
+        /* GENERAL & COMMON GUIDELINES */
         "General Guidelines": [
-            "All participants must carry their valid college ID card.",
-            "Registration for all events must be completed before the stipulated deadline.",
-            "Participants should report to the respective venue 30 minutes prior to the event time.",
-            "Any form of indiscipline or misbehavior will lead to immediate disqualification of the team/college.",
-            "The judges' decisions are final and binding in all events.",
-            "The organizing committee reserves the right to change or modify the rules at any time.",
-            "Participants must take care of their personal belongings. The organizers will not be responsible for any loss."
+            "1. Registration will commence at 8:30 AM and close sharply at 10:30 AM. No late registrations will be entertained.",
+            "2. All events will commence from 11:00 AM onwards.",
+            "3. The Valedictory Function will commence at 4:00 PM, and college buses will depart from the campus at 5:00 PM.",
+            "4. Participants must report to their respective event venues on time. Late arrival may result in disqualification.",
+            "5. Participants must strictly adhere to the time limits prescribed for their respective events.",
+            "6. College buses will operate on the regular routes. Participants from other colleges may also avail themselves of the college bus facility.",
+            "7. A participating certificate will be provided to all participants who take part in the event.",
+            "8. All participants must provide the full address of their college, including the PIN code, during registration.",
+            "9. A valid College ID card is mandatory for event registration and must be carried at all times.",
+            "10. Any form of malpractice, misconduct, or use of unfair means will result in immediate disqualification.",
+            "11. Vulgarity, profanity, obscenity, or any form of inappropriate behaviour will result in immediate disqualification.",
+            "12. Participants are responsible for bringing all necessary materials, equipment, tools, laptops, costumes, and other technical requirements required for their respective events.",
+            "13. Participants are responsible for the safety of their personal belongings. The organisers will not be held responsible for any loss or damage.",
+            "14. Lunch will be provided for all registered participants.",
+            "15. The decision of the judges will be final and binding in all events. No further queries or appeals regarding the judges’ decision will be entertained.",
+            "16. A participant may participate in only one event, except for the Spot Game.",
+            "17. Participants who have registered for any event may participate in the Spot Game. No cash prize will be awarded for the Spot Game; gifts will be presented to the winners on the spot.",
+            "18. Western Dance and Group Song are common events for both UG and PG students. 50% of the marks scored by the team will be considered for the UG Overall Championship, and the remaining 50% will be considered for the PG Overall Championship.",
+            "19. Solo Dance is a common event for both UG and PG students. The marks obtained by the UG winner will be considered for the UG Overall Championship Trophy, while the marks obtained by the PG winner will be considered for the PG Overall Championship Trophy."
         ],
         "PG Guidelines": [
-            "All participants must carry their valid college ID card.",
-            "Participants should report to the respective venue 30 minutes prior to the event time.",
-            "Professional or formal dress code is mandatory for PG events unless specified otherwise in specific event rules.",
-            "Any form of indiscipline or misbehavior will lead to immediate disqualification of the team/college.",
-            "The judges' decisions are final and binding in all events.",
-            "All presentations and documents must be original. Plagiarism will strictly lead to disqualification."
+            "1. Registration will commence at 8:30 AM and close sharply at 10:30 AM. No late registrations will be entertained.",
+            "2. All events will commence from 11:00 AM onwards.",
+            "3. Professional or formal dress code is mandatory for PG events unless specified otherwise.",
+            "4. The Valedictory Function will commence at 4:00 PM, and college buses will depart from campus at 5:00 PM.",
+            "5. Participants must report to their respective event venues on time.",
+            "6. A valid College ID card is mandatory for event registration and must be carried at all times.",
+            "7. Participants must provide full college address including PIN code during registration.",
+            "8. Lunch will be provided for all registered participants.",
+            "9. The decision of the judges will be final and binding in all events.",
+            "10. Plagiarism or misconduct will result in immediate disqualification.",
+            "11. Western Dance & Group Song: 50% marks for UG Overall Championship and 50% marks for PG Overall Championship.",
+            "12. Solo Dance: Marks obtained by PG winner will count towards the PG Overall Championship Trophy."
         ]
     };
 

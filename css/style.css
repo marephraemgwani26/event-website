@@ -2022,3 +2022,117 @@ a {
 .advanced-glow {
   display: none;
 }
+
+/* Card Taglines & Badges */
+.card-tagline {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+  margin-top: 0.2rem;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.special-prize-badge {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 12px rgba(255, 65, 108, 0.6);
+  animation: pulseBadge 2s infinite ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@keyframes pulseBadge {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.event-details-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.event-detail-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--secondary-color);
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+}
+
+.event-detail-chip i {
+  color: var(--secondary-color);
+}
+
+/* Gallery Filter Buttons */
+.gallery-filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--secondary-color);
+  color: #000;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 15px rgba(245, 176, 65, 0.4);
+}
+
+.gallery-item.hide {
+  display: none !important;
+}
+
+/* Timeline Preview Images */
+.timeline-img-wrapper {
+  margin-top: 1.2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 180px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.timeline-img-wrapper:hover {
+  transform: scale(1.02);
+  border-color: var(--secondary-color);
+}
+
+.timeline-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
